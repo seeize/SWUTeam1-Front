@@ -16,7 +16,12 @@ const ResumeForm = () => {
   const [photo, setPhoto] = useState(PhotoIcon);
   const [text, setText] = useState('');
   const [selectedStrengths, setSelectedStrengths] = useState([]);
+  const [educations, setEducations] = useState([]); // 학력 입력 박스를 관리
+  const [showAddButton, setShowAddButton] = useState(true); // '상세학력 추가하기' 버튼 표시 상태
+  const [careers, setCareers] = useState([]);
+  const [showCareerAddButton, setShowCareerAddButton] = useState(true);
 
+  
   const handleTextChange = (event) => {
     const value = event.target.value;
     const maxLength = 30;
@@ -47,6 +52,27 @@ const ResumeForm = () => {
         : prev
     );
   };
+
+  const addEducationBox = () => {
+    setEducations([...educations, {}]); // 새 학력 입력 박스를 추가
+  };
+
+  const handleAddButtonClick = () => {
+    setShowAddButton(false); // '상세학력 추가하기' 버튼 숨김
+    addEducationBox(); // 첫 번째 학력 입력 박스 추가
+  };
+
+  // 경력 입력 박스를 추가하는 함수
+  const addCareerBox = () => {
+    setCareers([...careers, {}]); // 새로운 경력 입력 박스 추가
+  };
+
+  // '경력 추가하기' 버튼 클릭 핸들러
+  const handleCareerAddButtonClick = () => {
+    setShowCareerAddButton(false); // 버튼 숨김
+    addCareerBox(); // 첫 번째 경력 입력 박스 추가
+  };
+
   
 
   return (
@@ -130,6 +156,7 @@ const ResumeForm = () => {
           <span className="step-number">3</span>
           <span className="step-title">학력정보를 입력해주세요</span>
         </div>
+
         <div className="education-input">
           <input
             type="text"
@@ -145,7 +172,46 @@ const ResumeForm = () => {
             상세 학력을 적으면 면접 제의 및 합격확률이 올라갈 수도 있어요!
           </p>
         </div>
-        <button className="addBtn">+ 상세학력 추가하기</button>
+        
+        {showAddButton && (
+          <button className="addBtn" onClick={handleAddButtonClick}>
+            + 상세학력 추가하기
+          </button>
+        )}
+
+        {/* 반복적으로 추가되는 학력 입력 박스 */}
+        {educations.map((_, index) => (
+          <div key={index} className="education-box">
+            <div>
+              <input type="text" className="input-field" placeholder="학교명(기관명)을 입력해주세요" />
+            </div>
+
+            <div className="box-1">
+              <p>재학기간</p>        
+                <input type="date" className="date-start" />
+            </div>
+
+            <div className="box-2">
+              <p> ~ </p>
+              <input type="date" className="date-end" />
+            </div>
+               
+            <div className="graduation-status">
+              <select>
+                <option value="">선택</option>
+                <option value="졸업">졸업</option>
+                <option value="재학">재학</option>
+                <option value="휴학">휴학</option>
+              </select>
+            </div>
+            <div className="box-3">
+              <button className="addBtn" onClick={addEducationBox}>
+                + 추가하기
+              </button>
+            </div>
+          </div>
+        ))}
+
       </section>
       
       {/* 4번 */}
@@ -168,8 +234,38 @@ const ResumeForm = () => {
             상세 경력을 적으면 면접 제의 및 합격확률이 올라갈 수도 있어요!
           </p>
         </div>
-        <button className="addBtn">+ 경력 추가하기</button>
+          {showCareerAddButton && (
+          <button className="addBtn" onClick={handleCareerAddButtonClick}>
+            + 경력 추가하기
+          </button>
+        )}
+
+        {/* 반복적으로 추가되는 경력 입력 박스 */}
+        {careers.map((_, index) => (
+          <div key={index} className="career-box">
+            <div>
+              <input type="text" className="input-field" placeholder="회사명을 입력해주세요" />
+            </div>
+            <div className="box-1">
+              <p>재직기간</p>
+              <input type="date" className="date-start" />
+            </div>
+            <div className="box-2">
+              <p> ~ </p>
+              <input type="date" className="date-end" />
+            </div>
+            <div>
+              <input type="text" className="input-field" placeholder="담당 업무를 입력해주세요" />
+            </div>
+            <div className="box-3">
+              <button className="addBtn" onClick={addCareerBox}>
+                + 추가하기
+              </button>
+            </div>
+          </div>
+        ))}
       </section>
+
       {/* 5번 */}
       <section className="step step5">
         <div className="step-header">
@@ -199,8 +295,6 @@ const ResumeForm = () => {
       </div>
       <button className="completeBtn">필수 항목 작성 완료하기</button>
       </section>
-
-
     </div>
   );
 };

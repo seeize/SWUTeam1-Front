@@ -27,3 +27,31 @@ body {
 input {
     outline: none;
 }
+
+.step {
+    margin-bottom: 30px;
+
+    .step-header {
+      display: flex;
+      margin-bottom: 10px;
+
+      .step-number {
+        background-color: var(--blue-80);
+        color: var(--Gray-0);
+        border-radius: 8px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        font-size: 20px;
+      } 
+
+      .step-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: var(--Gray-90); 
+      }
+    }
+}
