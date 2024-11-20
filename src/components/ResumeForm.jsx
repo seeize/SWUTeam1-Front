@@ -4,6 +4,7 @@ import PhotoIcon from '../assets/img/ResumeForm/photo.svg';
 import cameraIcon from '../assets/img/ResumeForm/camera.svg';
 import searchIcon from '../assets/img/ResumeForm/search.svg';
 
+
 const strengths = [
   "성실함", "끈기있음", "친절함", "긍정적", "적극적",
   "책임감 강함", "시간개념 철저", "체력 좋음", "손이 빠름",
