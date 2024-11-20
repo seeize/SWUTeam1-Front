@@ -69,6 +69,7 @@ function Camera() {
     };
 
     return (
+        <div className="container">
         <div className="camera-container">
             <div className="camera-top">
                 <button className="Camera-close-button" onClick={() => navigate(-1)}>
@@ -93,6 +94,7 @@ function Camera() {
             </div>
             <canvas ref={canvasRef} style={{ display: 'none' }} />
             <button onClick={captureImage} className="capture-button" style={{ backgroundImage: `url(${buttonCameraImg})` }} />
+        </div>
         </div>
     );
 }

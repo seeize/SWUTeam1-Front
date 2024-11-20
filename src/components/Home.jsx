@@ -1,13 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import Header from './Header';
 import Banner from './CarouseBanner';
 import { jobPostsData, myResumeData } from './home-data';
 import '../assets/sass/section/Home.scss';
 
-
 const Home = () => {
+  const navigate = useNavigate(); 
+
   return (
-    <div className="Home-container">
+    <div className="container">
       <Header />
       <main className="Home-content">
         <div className="Home-Banner">
@@ -40,7 +42,10 @@ const Home = () => {
 
         <section className="Home-my-resume">
           <h2>내 이력서</h2>
-          <button className="Home-add-resume">
+          <button
+            className="Home-add-resume"
+            onClick={() => navigate('/resumeform')} // 함수 없이 바로 사용
+          >
             <img
               src={require('../assets/img/icons/tabler_plus.png')}
               alt="+"

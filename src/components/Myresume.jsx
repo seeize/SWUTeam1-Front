@@ -1,11 +1,17 @@
 import React from 'react';
 import Header from './Header';
 import Banner from './CarouseBanner';
+import { useNavigate } from 'react-router-dom'; 
+
 import { myResumeData } from './home-data';
 import '../assets/sass/section/Home.scss';
 
 const Myresume = () => {
+  const navigate = useNavigate(); 
+
   return (
+    
+    <div className="container">
     <div className="Home-container">
       <Header />
       <main className="Home-content">
@@ -15,7 +21,7 @@ const Myresume = () => {
 
         <section className="Home-my-resume">
           <h2>내 이력서</h2>
-          <button className="Home-add-resume">
+          <button className="Home-add-resume" onClick={() => navigate('/resumeform')}>
             <img
               src={require('../assets/img/icons/tabler_plus.png')}
               alt="+"
@@ -35,6 +41,7 @@ const Myresume = () => {
           </div>
         </section>
       </main>
+    </div>
     </div>
   );
 };
