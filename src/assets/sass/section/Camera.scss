@@ -4,20 +4,11 @@
     box-sizing: border-box;
   }
   
-  body, html {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-  }
   
   .camera-container {
     width: 360px;
     height: 821px;
     position: relative;
-    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
@@ -40,7 +31,7 @@
     position: absolute;
     color: #ffffff;
     font-size: 25px;
-    left: -20%;
+    left: -23%;
     z-index: 5;
   }
 
