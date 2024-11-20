@@ -12,8 +12,14 @@
     background-color: #F2F2F2;
   }
 
-  .Home-Banner {
+
+  .Top-Home-Banner {
     margin-left: -20px;
+  }
+
+  
+  .Bottom-Home-Banner {
+    display: none;
   }
 
   /*관심 채용 공고, 내 이력서*/
@@ -120,4 +126,141 @@
     font-weight: 500;
     margin-top: 20px;
   }
+
+    /* 관심 채용 공고 - 기본 화면에서 2개만 표시 */
+  .Home-post-list .Home-post-item:nth-child(n + 3) {
+    display: none;
+  }
+
+  /* 내 이력서 - 기본 화면에서 1개만 표시 */
+  .Home-resume-list .Home-resume-item:nth-child(n + 2) {
+    display: none;
+  }
+
+  .B-menu {
+    display: none;
+  }
+
+    /* 기본 설정 */
+  .Home-post-list,
+  .Home-resume-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .menu-home { 
+    font-weight: 700;
+  }
+
+  .menu-logout {
+    color: red;
+    font-weight: 700;
+    margin-left: 15px;
+  }
+
+  /* 반응형 PC 스타일 */
+@media (min-width: 1180px) {
+  .Home-container {
+    background-color: #F2F2F2;
+    position: relative;
+  }
+
+  .B-menu {
+    display: block;
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 750px;
+  }
+
+  .B-menu-list {
+    display: flex; /* 수평 정렬 */
+    list-style: none; /* 기본 목록 스타일 제거 */
+    padding: 0;
+    margin: 0;
+    justify-content: space-between; /* 각 항목 간 간격 조정 */
+  }
+  
+  .menu-list li {
+    margin: 0 10px; /* 항목 간 간격 추가 */
+    cursor: pointer; /* 클릭 가능한 느낌 추가 */
+  }
+  
+  .Top-Home-Banner {
+    display: none;
+  }
+
+  
+  .Bottom-Home-Banner {
+    display: block;
+  }
+
+  .Home-content {
+    width: 680px;
+    height: auto;
+    margin: 15px auto;
+  }
+
+  .Home-job-posts h2,
+  .Home-my-resume h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .Home-add-post {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .Home-add-resume {
+    width: 310px;
+    padding: 15px 20px;
+  }
+  
+  .Home-post-list .Home-post-item:nth-child(n + 3) {
+    display: block;
+  }
+
+  .Home-resume-list .Home-resume-item:nth-child(n + 2) {
+    display: block;
+  }
+
+  .Home-post-list .Home-post-item:nth-child(n + 5) {
+    display: none;
+  }
+
+  .Home-resume-list .Home-resume-item:nth-child(n + 4) {
+    display: none;
+  }
+
+  .Home-post-list {
+    gap: 10px;
+  }
+
+  .Home-resume-list {
+    gap: 20px;
+  }
+
+  .Home-post-item {
+    width: 152px;
+    font-size: 18px;
+  }
+
+  .Home-resume-item {
+    width: 310px;
+  }
+
+  .Home-more {
+    margin-left: 590px;
+  }
+
+  .Bottom-Home-Banner {
+    position: absolute;
+    left: 35%;
+    bottom: 5%;
+  }
+
+
+}
   

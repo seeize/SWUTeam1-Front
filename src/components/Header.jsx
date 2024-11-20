@@ -29,7 +29,6 @@ const Header = () => {
           <ul>
             <li onClick={() => handleMenuItemClick('/Interest')}>관심채용공고</li>
             <li onClick={() => handleMenuItemClick('/myresume')}>내 이력서</li>
-            <li onClick={() => handleMenuItemClick('/')}>내보낸 파일</li>
             <li onClick={() => handleMenuItemClick('/')}>설정</li>
             <li className="Header-logout" onClick={() => handleMenuItemClick('/Login')} >
               <img src={require('../assets/img/icons/icon-logout.png')} alt="" className="Header-logout-icon" />
