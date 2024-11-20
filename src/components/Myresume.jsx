@@ -6,24 +6,24 @@ import '../assets/sass/section/Home.scss';
 
 const Myresume = () => {
   return (
-    <div className="container">
+    <div className="Home-container">
       <Header />
-      <main className="content">
-        <div className="Banner">
+      <main className="Home-content">
+        <div className="Home-Banner">
           <Banner />
         </div>
 
-        <section className="my-resume">
+        <section className="Home-my-resume">
           <h2>내 이력서</h2>
-          <button className="add-resume">
+          <button className="Home-add-resume">
             <img
               src={require('../assets/img/icons/tabler_plus.png')}
               alt="+"
-              className="plus_icon"
+              className="Home-plus_icon"
             />
             새 이력서 작성하기
           </button>
-          <div className="resume-item">
+          <div className="Home-resume-item">
             {myResumeData.name}
             <img
               src={require('../assets/img/icons/orange-arrow.png')}

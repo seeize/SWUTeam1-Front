@@ -7,27 +7,27 @@ import '../assets/sass/section/Home.scss';
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="Home-container">
       <Header />
-      <main className="content">
-        <div className="Banner">
+      <main className="Home-content">
+        <div className="Home-Banner">
           <Banner />
         </div>
-        <section className="job-posts">
+        <section className="Home-job-posts">
           <h2>관심 채용 공고</h2>
 
-          <button className="add-post">
+          <button className="Home-add-post">
             <img
               src={require('../assets/img/icons/tabler_plus.png')}
               alt="+"
-              className="plus_icon"
+              className="Home-plus_icon"
             />
             추가하기
           </button>
 
-          <div className="post-list">
+          <div className="Home-post-list">
             {jobPostsData.map((post, index) => (
-              <div key={index} className="post-item">
+              <div key={index} className="Home-post-item">
                 {post.title}
                 <br />
                 <span>{post.date}</span>
@@ -35,20 +35,20 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="more">더보기</div>
+          <div className="Home-more">더보기</div>
         </section>
 
-        <section className="my-resume">
+        <section className="Home-my-resume">
           <h2>내 이력서</h2>
-          <button className="add-resume">
+          <button className="Home-add-resume">
             <img
               src={require('../assets/img/icons/tabler_plus.png')}
               alt="+"
-              className="plus_icon"
+              className="Home-plus_icon"
             />
             새 이력서 작성하기
           </button>
-          <div className="resume-item">
+          <div className="Home-resume-item">
             {myResumeData.name}
             <img
               src={require('../assets/img/icons/orange-arrow.png')}

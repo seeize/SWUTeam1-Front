@@ -28,14 +28,23 @@
     object-fit: cover;
   }
   
-  .top {
+  .camera-top {
     display: flex;
     position: absolute;
     top: 10%;
     right: 9%;
   }
-  
-  .icon {
+
+
+  .Camera-close-button{
+    position: absolute;
+    color: #ffffff;
+    font-size: 25px;
+    left: -20%;
+    z-index: 5;
+  }
+
+  .camera-info-icon {
     height: 25px;
     width: 25px;
     z-index: 5;
@@ -49,7 +58,7 @@
     transition: opacity 0.3s ease-in-out;
   }
   
-  .top-image {
+  .info-catpion {
     height: auto;
     z-index: 5;
   }

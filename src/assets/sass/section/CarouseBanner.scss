@@ -5,8 +5,10 @@
 
 .carousel-banner {
     position: relative;
-    width: 100%;
+    width: 360px;
     padding-bottom: 24px;
+    margin-left: -20px;
+    margin-top: -18px;
 }
 
 .banner-content {
@@ -16,7 +18,7 @@
 }
 
 .banner-image {
-    width: 100%;
+    width: 360px;
     z-index: 0; 
 }
 

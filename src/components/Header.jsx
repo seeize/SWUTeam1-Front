@@ -18,21 +18,21 @@ const Header = () => {
 
   return (
     <header className="header">
-      <button className="menu-icon" onClick={toggleMenu} style={{ backgroundImage: `url(${menuicon})` }}></button>
-      <div className="title" onClick={() => handleMenuItemClick('/')}>
-        <img src={require('../assets/img/icons/mainlogo.png')} alt="아이콘" className="icon" />
-        <h1 className="titletext">노련한 이력서</h1>
+      <button className="Header-menu-icon" onClick={toggleMenu} style={{ backgroundImage: `url(${menuicon})` }}></button>
+      <div className="Header-title" onClick={() => handleMenuItemClick('/home')}>
+        <img src={require('../assets/img/icons/mainlogo.png')} alt="아이콘" className="Header-icon" />
+        <h1 className="Header-titletext">노련한 이력서</h1>
       </div>
 
       {isMenuOpen && (
-        <div className="menu">
+        <div className="Header-menu">
           <ul>
-            <li onClick={() => handleMenuItemClick('/')}>관심채용공고</li>
+            <li onClick={() => handleMenuItemClick('/Interest')}>관심채용공고</li>
             <li onClick={() => handleMenuItemClick('/myresume')}>내 이력서</li>
             <li onClick={() => handleMenuItemClick('/')}>내보낸 파일</li>
             <li onClick={() => handleMenuItemClick('/')}>설정</li>
-            <li className="logout" onClick={() => handleMenuItemClick('/')} >
-              <img src={require('../assets/img/icons/icon-logout.png')} alt="" className="logout-icon" />
+            <li className="Header-logout" onClick={() => handleMenuItemClick('/Login')} >
+              <img src={require('../assets/img/icons/icon-logout.png')} alt="" className="Header-logout-icon" />
               로그아웃
             </li>
           </ul>

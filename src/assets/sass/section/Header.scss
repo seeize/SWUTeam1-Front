@@ -5,16 +5,8 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 360px;
-  height: 821px;
-  background-color: #f0f0f0;
-  position: relative;
-  font-family: Arial, sans-serif;
-}
-
 .header {
-  margin-top: 90px;
+  margin-top: 60px;
   background-color: #013C58;
   color: white;
   display: flex;
@@ -24,26 +16,25 @@
 }
 
 /* 메인 아이콘, 노련한 이력서 텍스트 컨테이너  */ 
-.title {
+.Header-title {
   display: flex;
   cursor: pointer;
 }
 
 /*노련한 이력서 텍스트*/
-.titletext {
+.Header-titletext {
   font-size: 20px;
-  margin-top: 10px;
 }
 
 /*메인 아이콘*/
-.icon {
-  width: 25px;
+.Header-icon {
   height: 25px;
-  margin-bottom: 5px;
+  width: 25px;
+  margin-right: 5px;
 }
 
 /*메뉴 토글 아이콘*/
-.menu-icon {
+.Header-menu-icon {
   background: none;
   border: none;
   position: absolute;
@@ -54,11 +45,11 @@
 }
 
 /* 메뉴 열렸을 때 */
-.menu {
+.Header-menu {
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 68px;
+  margin-top: 60px;
   width: 200px;
   height: 50000px;
   background-color: white;
@@ -67,13 +58,9 @@
   color: black;
   z-index: 99999999999999999999999999;
   animation: slideIn 0.3s ease-in-out;
-  transform-origin: right center;
 }
 
-.menu.closed {
-  animation: slideOut 0.3s ease-in-out;
-  transform-origin: right center;
-}
+
 
 /*메뉴 나올 때*/
 @keyframes slideIn {
@@ -85,11 +72,11 @@
   }
 }
 
-.menu ul {
+.Header-menu ul {
   list-style: none;
 }
 
-.menu li {
+.Header-menu li {
   margin-bottom: 20px;
   font-size: 1rem;
   cursor: pointer;
@@ -98,10 +85,12 @@
   align-items: center;
 }
 
-.logout {
+.Header-logout {
   color: red;
 }
 
-.logout-icon {
+.Header-logout-icon {
   margin-right: 3px;
+  height: 30px;
+  width: 30px;
 }
