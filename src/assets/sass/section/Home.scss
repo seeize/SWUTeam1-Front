@@ -15,6 +15,7 @@
 
   .Top-Home-Banner {
     margin-left: -20px;
+    z-index: 0;
   }
 
   
@@ -257,8 +258,9 @@
 
   .Bottom-Home-Banner {
     position: absolute;
-    left: 35%;
+    left: 50%;
     bottom: 5%;
+    margin-left: -180px;
   }
 
 
