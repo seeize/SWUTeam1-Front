@@ -91,14 +91,14 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin: 10px 0 0 auto; /* 오른쪽 정렬 */
+    margin: 10px 0 0 auto; 
   }
   
   /* 하단 버튼 컨테이너 */
   .bottom-buttons {
     width: 320px;
     position: absolute;
-    bottom: 100px; /* 화면 하단에 배치 */
+    bottom: 100px;
     left: 20px;
     right: 20px;
   }
@@ -140,7 +140,7 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin: 10px 0 0 auto; /* 오른쪽 정렬 */
+    margin: 10px 0 0 auto;
   }
 
   @media (min-width: 1180px) {
@@ -194,7 +194,7 @@
     
     .bottom-buttons {
       position: absolute;
-      top: 10%; /* 화면 하단에 배치 */
+      top: 10%; 
       left: 70%;
     }
     
