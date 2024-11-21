@@ -116,21 +116,28 @@ const Home = () => {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="input-group">
-              <input
-                type="text"
-                placeholder="사이트 별칭을 적어주세요"
-                value={newPostTitle}
-                onChange={(e) => setNewPostTitle(e.target.value)}
-              />
+
+
+              <div className="input-title">
+                <input
+                  type="text"
+                  placeholder="사이트 별칭을 적어주세요"
+                  value={newPostTitle}
+                  onChange={(e) => setNewPostTitle(e.target.value)} 
+                />
+              </div>
+
             </div>
 
-            <div className="input-group">
-              <input
-                type="text"
-                placeholder="사이트 주소"
-                value={newPostUrl}
-                onChange={(e) => setNewPostUrl(e.target.value)}
-              />
+             <div className="input-address">
+                <input
+                  type="text"
+                  placeholder="사이트 주소"
+                  value={newPostUrl}
+                  onChange={(e) => setNewPostUrl(e.target.value)} 
+                />
+
+                
               <button
                 className="paste-button"
                 onClick={() =>

@@ -46,12 +46,22 @@ const Interest = () => {
   };
 
   return (
-    <div className="interest-container">
+    <div className="container interest-container2">
       <Header />
-      <main className="interest-content">
-        <div className="Banner">
+      <div className="B-menu">
+          <ul className="B-menu-list">
+            <li className="menu-home" onClick={() => navigate('/home')}>홈</li>
+            <li onClick={() => navigate('/Interest')}>관심채용공고</li>
+            <li onClick={() => navigate('/myresume')}>내 이력서</li>
+            <li className="menu-logout" onClick={() => navigate('/login')}>
+              로그아웃
+            </li>
+          </ul>
+        </div>
+        <div className="top-ihome-banner">
           <Banner />
         </div>
+      <main className="interest-content">
         <section className="job-posts">
           <h2 className="interest-hired">관심 채용 공고</h2>
 
@@ -76,8 +86,6 @@ const Interest = () => {
               </div>
             ))}
           </div>
-
-          <div className="more">더보기</div>
         </section>
 
         {/* 모달 */}
@@ -125,6 +133,9 @@ const Interest = () => {
             </div>
           </div>
         )}
+              <div className="Bottom-Home-Banner">
+                <Banner />
+              </div>
       </main>
     </div>
   );
