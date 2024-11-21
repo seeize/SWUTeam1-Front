@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import editIcon from '../assets/img/ResumeForm/edit.svg';
 import PhotoIcon from '../assets/img/ResumeForm/photo.svg'; 
 import cameraIcon from '../assets/img/ResumeForm/camera.svg';
 import searchIcon from '../assets/img/ResumeForm/search.svg';
+import arrowDownIcon from '../assets/img/ResumeForm/arrow_down.svg';
+import closeIcon from '../assets/img/ResumeForm/tabler_x.svg';
+import { useNavigate } from 'react-router-dom';
 
 
 const strengths = [
@@ -21,7 +24,10 @@ const ResumeForm = () => {
   const [showAddButton, setShowAddButton] = useState(true); // '상세학력 추가하기' 버튼 표시 상태
   const [careers, setCareers] = useState([]);
   const [showCareerAddButton, setShowCareerAddButton] = useState(true);
-
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
+  const sectionsRef = useRef([]); // 각 섹션의 참조를 저장
+  const navigate = useNavigate();
   
   const handleTextChange = (event) => {
     const value = event.target.value;
@@ -74,12 +80,54 @@ const ResumeForm = () => {
     addCareerBox(); // 첫 번째 경력 입력 박스 추가
   };
 
-  
+  const scrollToSection = (index) => {
+    setCurrentStep(index); // 현재 단계 업데이트
+    sectionsRef.current[index].scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const toggleDropdown = () => setShowDropdown(!showDropdown);
+
+  const handleButtonClick = () => {
+    navigate('/camera'); 
+  };
 
   return (
     <div className="resume_warp container">
+      {/* 헤더 */}
+      <header className="resume_header">
+        <div className="header-icons">
+          <img src={closeIcon} alt="Close" className="close-icon" />
+          <img
+            src={arrowDownIcon}
+            alt="Arrow Down"
+            className="arrow-icon"
+            onClick={toggleDropdown}
+          />
+        </div>
+        {showDropdown && (
+          <ul className="dropdown-menu">
+            {['제목', '개인정보', '학력정보', '경력사항', '성격 및 강점'].map(
+              (section, index) => (
+                <li
+                  key={index}
+                  className="dropdown-item"
+                  onClick={() => scrollToSection(index)}
+                >
+                  {section}
+                </li>
+              )
+            )}
+          </ul>
+        )}
+        <div className="progress-bar">
+          <div
+            className="progress-bar-fill"
+            style={{ width: `${(currentStep + 1) * 20}%` }} // 단계에 따라 너비 조정
+          ></div>
+        </div>
+      </header>
       {/* 1번 */}
-      <section className="step step1">
+      <section ref={(el) => (sectionsRef.current[0] = el)} className="step step1">
         <div className="step-header">
           <span className="step-number">1</span>
           <span className="step-title">이력서 제목을 입력해주세요</span>
@@ -99,13 +147,13 @@ const ResumeForm = () => {
         {text.length}/30
       </div>
       <div class="photoBtn-container">
-        <button className="photo-button">
+        <button className="photo-button" onClick={handleButtonClick}>
           <img src={cameraIcon} alt="Camera Icon" className="camera-icon" /> 사진 찍기
         </button>
       </div>
       </section>
     {/* 2번 */}
-      <section className="step step2">
+    <section ref={(el) => (sectionsRef.current[1] = el)} className="step step2">
         <div className="step-header">
           <span className="step-number">2</span>
           <span className="step-title">개인정보를 입력해주세요</span>
@@ -125,19 +173,19 @@ const ResumeForm = () => {
             </label>
           </div>
         </div>
-        <div className="input-group">
+        <div className="inputgroup">
           <label>이름</label>
           <input type="text" placeholder="김이음" />
         </div>
-        <div className="input-group">
+        <div className="inputgroup">
           <label>전화번호</label>
           <input type="text" placeholder="010-0000-0000" />
         </div>
-        <div className="input-group">
+        <div className="inputgroup">
           <label>이메일</label>
           <input type="email" placeholder="noin99@gmail.com" />
         </div>
-        <div className="input-group">
+        <div className="inputgroup">
           <label>거주지</label>
           <select>
             <option>광역시/도</option>
@@ -152,7 +200,7 @@ const ResumeForm = () => {
         </div>
       </section>
       {/* 3번 */}
-      <section className="step step3">
+      <section ref={(el) => (sectionsRef.current[2] = el)} className="step step3">
         <div className="step-header">
           <span className="step-number">3</span>
           <span className="step-title">학력정보를 입력해주세요</span>
@@ -216,7 +264,7 @@ const ResumeForm = () => {
       </section>
       
       {/* 4번 */}
-      <section className="step step4">
+      <section ref={(el) => (sectionsRef.current[3] = el)} className="step step4">
         <div className="step-header">
           <span className="step-number">4</span>
           <span className="step-title">경력사항을 입력해주세요</span>
@@ -268,7 +316,7 @@ const ResumeForm = () => {
       </section>
 
       {/* 5번 */}
-      <section className="step step5">
+      <section ref={(el) => (sectionsRef.current[4] = el)} className="step step5">
         <div className="step-header">
           <span className="step-number">5</span>
           <span className="step-title">성격 및 강점을 입력해주세요</span>
