@@ -111,7 +111,7 @@ const ResumeForm = () => {
       {/* 헤더 */}
       <header className="resume_header">
         <div className="header-icons">
-          <img src={closeIcon} alt="Close" className="close-icon" />
+          <img src={closeIcon} alt="Close" className="close-icon" onClick={() => navigate(-1)} />
           <img
             src={arrowDownIcon}
             alt="Arrow Down"
