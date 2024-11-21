@@ -45,6 +45,7 @@ const OCRresult = () => {
                     onChange={handleChange}
                     className="result-textarea"
                     maxLength="1000"
+                    spellCheck="true"
                     readOnly
                 />
 
