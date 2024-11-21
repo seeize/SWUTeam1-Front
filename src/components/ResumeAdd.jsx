@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import cameraIcon from '../assets/img/ResumeForm/camera.svg';
+import { useNavigate } from 'react-router-dom';
 
 const ResumeAdd = () => {
     const [certificates, setCertificates] = useState([]); // 자격증 리스트
@@ -8,7 +9,8 @@ const ResumeAdd = () => {
       date: '',
     }); // 현재 입력 중인 자격증 정보
     const [isAdding, setIsAdding] = useState(false); // 추가 입력 필드 표시 여부
-  
+    const navigate = useNavigate();
+
     // 자격증 추가
     const addCertificate = () => {
       if (!currentCertificate.name || !currentCertificate.date) {
@@ -27,6 +29,10 @@ const ResumeAdd = () => {
         ...prev,
         [name]: value,
       }));
+    };
+
+    const handleButtonClick = () => {
+      navigate('/camera');
     };
 
   return (
@@ -80,7 +86,7 @@ const ResumeAdd = () => {
     <p className="subTitle"> 자기소개서 </p>
     <div className="row">
         <p className="subTitle"> 성장과정 </p>
-        <button className="photo-button">
+        <button className="photo-button" onClick={handleButtonClick}>
           <img src={cameraIcon} alt="Camera Icon" className="camera-icon" /> 사진 찍기
         </button>
         </div>
@@ -90,7 +96,7 @@ const ResumeAdd = () => {
         <button className="copyBtn"> 복사하기 </button>
     <div className="row">
         <p className="subTitle"> 성격소개 </p>
-        <button className="photo-button">
+        <button className="photo-button" onClick={handleButtonClick}>
           <img src={cameraIcon} alt="Camera Icon" className="camera-icon" /> 사진 찍기
         </button>
     </div>
@@ -110,7 +116,7 @@ const ResumeAdd = () => {
         <button className="copyBtn"> 복사하기 </button>
     <div className="row">
         <p className="subTitle"> 희망업무 및 포부 </p>
-        <button className="photo-button">
+        <button className="photo-button" onClick={handleButtonClick}>
           <img src={cameraIcon} alt="Camera Icon" className="camera-icon" /> 사진 찍기
         </button>
     </div>
@@ -120,7 +126,7 @@ const ResumeAdd = () => {
         <button className="copyBtn"> 복사하기 </button>
     <div className="row">
         <p className="subTitle"> 특기사항 </p>
-        <button className="photo-button">
+        <button className="photo-button" onClick={handleButtonClick}>
           <img src={cameraIcon} alt="Camera Icon" className="camera-icon" /> 사진 찍기
         </button>
     </div>

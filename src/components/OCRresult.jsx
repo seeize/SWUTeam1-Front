@@ -25,6 +25,7 @@ const OCRresult = () => {
     };
     
     return (
+        <div className="container">
         <div className="ocr-container">
             <button className="close-button" onClick={() => navigate(-1)}>
                 ✖
@@ -67,6 +68,7 @@ const OCRresult = () => {
                     </button>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

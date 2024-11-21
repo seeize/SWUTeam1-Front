@@ -4,20 +4,11 @@
     box-sizing: border-box;
   }
   
-  body, html {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-  }
   
   .camera-container {
     width: 360px;
     height: 821px;
     position: relative;
-    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
@@ -28,14 +19,23 @@
     object-fit: cover;
   }
   
-  .top {
+  .camera-top {
     display: flex;
     position: absolute;
     top: 10%;
     right: 9%;
   }
-  
-  .icon {
+
+
+  .Camera-close-button{
+    position: absolute;
+    color: #ffffff;
+    font-size: 25px;
+    left: -23%;
+    z-index: 5;
+  }
+
+  .camera-info-icon {
     height: 25px;
     width: 25px;
     z-index: 5;
@@ -49,7 +49,7 @@
     transition: opacity 0.3s ease-in-out;
   }
   
-  .top-image {
+  .info-catpion {
     height: auto;
     z-index: 5;
   }

@@ -69,17 +69,21 @@ function Camera() {
     };
 
     return (
+        <div className="container">
         <div className="camera-container">
-            <div className="top">
+            <div className="camera-top">
+                <button className="Camera-close-button" onClick={() => navigate(-1)}>
+                    ✖
+                </button>
                 <img
                     src={require('../assets/img/icons/caption.png')}
                     alt="상단 이미지"
-                    className={`top-image ${captionVisible ? '' : 'hidden'}`}
+                    className={`info-catpion ${captionVisible ? '' : 'hidden'}`}
                 />
                 <img
                     src={require('../assets/img/icons/Vector.png')}
                     alt="아이콘"
-                    className="icon"
+                    className="camera-info-icon"
                     onClick={toggleCaption}
                 />
             </div>
@@ -90,6 +94,7 @@ function Camera() {
             </div>
             <canvas ref={canvasRef} style={{ display: 'none' }} />
             <button onClick={captureImage} className="capture-button" style={{ backgroundImage: `url(${buttonCameraImg})` }} />
+        </div>
         </div>
     );
 }

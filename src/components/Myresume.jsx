@@ -1,39 +1,63 @@
 import React from 'react';
 import Header from './Header';
 import Banner from './CarouseBanner';
+import { useNavigate } from 'react-router-dom'; 
+
 import { myResumeData } from './home-data';
 import '../assets/sass/section/Home.scss';
 
 const Myresume = () => {
+  const navigate = useNavigate(); 
+
   return (
-    <div className="container">
+    
+    <div className="container Home-container">
       <Header />
-      <main className="content">
-        <div className="Banner">
+      <div className="B-menu">
+        <ul className="B-menu-list">
+          <li className="menu-home" onClick={() => navigate('/home')}>홈</li>
+          <li onClick={() => navigate('/Interest')}>관심채용공고</li>
+          <li onClick={() => navigate('/myresume')}>내 이력서</li>
+          <li className="menu-logout" onClick={() => navigate('/login')}>
+            로그아웃
+          </li>
+        </ul>
+      </div>
+      <main className="Home-content">
+        <div className="Top-Home-Banner">
           <Banner />
         </div>
-
-        <section className="my-resume">
+        <section className="Home-my-resume">
           <h2>내 이력서</h2>
-          <button className="add-resume">
+          <button className="Home-add-resume" onClick={() => navigate('/resumeform')}>
             <img
               src={require('../assets/img/icons/tabler_plus.png')}
               alt="+"
-              className="plus_icon"
+              className="Home-plus_icon"
             />
             새 이력서 작성하기
           </button>
-          <div className="resume-item">
-            {myResumeData.name}
-            <img
-              src={require('../assets/img/icons/orange-arrow.png')}
-              alt=">"
-              className="orange-arrow"
-            />
-            <br />
-            <span>최종 수정일 {myResumeData.lastUpdated}</span>
+
+          <div className="Home-resume-list">
+            {myResumeData.map((resume, index) => (
+              <div key={index} className="Home-resume-item">
+                {resume.name}
+                <img
+                  src={require('../assets/img/icons/orange-arrow.png')}
+                  alt=">"
+                  className="orange-arrow"
+                />
+                <br />
+                <span>최종 수정일 {resume.lastUpdated}</span>
+              </div>
+            ))}
           </div>
         </section>
+
+        
+        <div className="Bottom-Home-Banner">
+          <Banner />
+        </div>
       </main>
     </div>
   );
