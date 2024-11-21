@@ -12,14 +12,19 @@
   padding: 20px;
 }
 
+.dBanner {
+  margin-top: 17px;
+}
+
 .detail-section {
     padding: 20px;
-    background: linear-gradient(to bottom, #fff9e6 70%, #f5f5f5); 
+    background: linear-gradient(to bottom, #fff9e6 70%, #f5f5f5); // 연노란색에서 하얘지는 그라데이션 (하얀색 비율 증가)
     border-radius: 10px;
     margin: 20px auto;
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
+
   
     .title-section {
       display: flex;
@@ -30,12 +35,6 @@
         width: 24px;
         height: 24px;
         margin-right: 10px;
-      }
-
-      .delete-icon {
-        margin-left: 50px;
-        width: 65px;
-        height: 35px;
       }
   
       .title {
@@ -105,15 +104,15 @@
           color: #333;
           margin-bottom: 10px;
           display: flex;
-          justify-content: space-between; 
+          justify-content: space-between; // 모집인원, 모집마감 사이 간격 늘리기
         }
   
         li span {
-          color: #666; 
+          color: #666; // 정보 없음에 대한 글씨 색상
         }
   
         li .info-none {
-          color: #ccc; 
+          color: #ccc; // 정보가 없을 때 색상 회색으로 표시
         }
       }
     }
