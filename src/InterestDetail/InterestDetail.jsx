@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Banner from "../components/CarouseBanner";
 import "./InterestDetail.scss";
 
-const InterestDetail = ({ onDeletePost }) => {
+const InterestDetail = () => {
   const { id } = useParams(); // URL에서 id 가져오기
   const navigate = useNavigate();
 
@@ -15,10 +15,10 @@ const InterestDetail = ({ onDeletePost }) => {
     return (
       <div className="container">
         <Header />
-        <main className="content">
-          <div className="Banner">
+        <div className="dBanner">
             <Banner />
           </div>
+        <main className="content">
           <section className="detail-section">
             <button className="back-button" onClick={() => navigate(-1)}>
               ← 뒤로 가기
@@ -30,40 +30,32 @@ const InterestDetail = ({ onDeletePost }) => {
     );
   }
 
-  const handleDelete = () => {
-    onDeletePost(post.id); // 삭제 함수 호출
-    navigate("/interest"); // 관심 공고 페이지로 이동
-  };
-
   return (
     <div className="detail-container">
       <Header />
-      <main className="detail-content">
-        <div className="Banner">
+      <div className="dBanner">
           <Banner />
         </div>
+      <main className="detail-content">
         <section className="detail-section">
+          {/* Title Section */}
           <div className="title-section">
             <img
               src={require("../assets/img/icons/left-arrow.png")}
               alt="아이콘"
               className="title-icon"
-              onClick={() => navigate("/interest")}
+              onClick={() => navigate("/interest")} // 클릭 시 interest 페이지로 이동
             />
             <h2 className="title">{post.title}</h2>
-            <img
-              src={require("../assets/img/icons/Frame 427319711.png")}
-              alt="삭제"
-              className="delete-icon"
-              onClick={handleDelete}
-            />
           </div>
 
+          {/* URL Section */}
           <div className="url-section">
             <p>주소</p>
             <div className="url-box">{post.url}</div>
           </div>
 
+          {/* Memo Section */}
           <div className="memo-section">
             <textarea
               className="memo-input"
@@ -72,6 +64,7 @@ const InterestDetail = ({ onDeletePost }) => {
             />
           </div>
 
+          {/* Recruitment Info */}
           <div className="info">
             <h3>모집 정보</h3>
             <ul>
@@ -85,20 +78,15 @@ const InterestDetail = ({ onDeletePost }) => {
                 채용담당자 <span>{post.recruiter || "담당자"}</span>
               </li>
               <li>
-                대표전화{" "}
-                <span className={post.phone ? "" : "info-none"}>
-                  {post.phone || "정보 없음"}
-                </span>
+                대표전화 <span className={post.phone ? "" : "info-none"}>{post.phone || "정보 없음"}</span>
               </li>
               <li>
-                이메일{" "}
-                <span className={post.email ? "" : "info-none"}>
-                  {post.email || "정보 없음"}
-                </span>
+                이메일 <span className={post.email ? "" : "info-none"}>{post.email || "정보 없음"}</span>
               </li>
             </ul>
           </div>
 
+          {/* Visit Button */}
           <button
             className="visit-button"
             onClick={() => window.open(post.url, "_blank")}
