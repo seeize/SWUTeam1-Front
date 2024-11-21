@@ -28,7 +28,10 @@ const ResumeForm = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const sectionsRef = useRef([]); // 각 섹션의 참조를 저장
   const navigate = useNavigate();
-  
+  const [postcode, setPostcode] = useState('');
+  const [address, setAddress] = useState('');
+  const [detailAddress, setDetailAddress] = useState('');
+
   const handleTextChange = (event) => {
     const value = event.target.value;
     const maxLength = 30;
@@ -90,6 +93,18 @@ const ResumeForm = () => {
   const handleButtonClick = () => {
     navigate('/camera'); 
   };
+
+  const openDaumPostcode = () => {
+    new window.daum.Postcode({
+      oncomplete: function (data) {
+        const addr = data.userSelectedType === 'R' ? data.roadAddress : data.jibunAddress;
+        setPostcode(data.zonecode); // 우편번호 설정
+        setAddress(addr); // 도로명 또는 지번 주소 설정
+        document.getElementById('detailAddressInput').focus(); // 상세 주소 입력란에 포커스
+      },
+    }).open();
+  };
+
 
   return (
     <div className="resume_warp container">
@@ -187,16 +202,34 @@ const ResumeForm = () => {
         </div>
         <div className="inputgroup">
           <label>거주지</label>
-          <select>
-            <option>광역시/도</option>
-          </select>
-          <select>
-            <option>시/구/군</option>
-          </select>
-          <select>
-            <option>동/읍/면</option>
-          </select>
-          <input type="text" className="detailInput" placeholder="(선택)상세주소 입력"/>
+          {/* 우편번호 검색 기능 */}
+          <div className="postcode-container">
+            <input
+              type="text"
+              placeholder="우편번호"
+              value={postcode}
+              readOnly
+              className="postcode-input"
+            />
+            <button type="button" onClick={openDaumPostcode}>
+              우편번호 찾기
+            </button>
+          </div>
+          <input
+            type="text"
+            placeholder="도로명주소"
+            value={address}
+            readOnly
+            className="addressinput"
+          />
+          <input
+            type="text"
+            placeholder="(선택) 상세주소 입력"
+            id="detailAddressInput"
+            value={detailAddress}
+            onChange={(e) => setDetailAddress(e.target.value)}
+            className="detailInput"
+          />
         </div>
       </section>
       {/* 3번 */}

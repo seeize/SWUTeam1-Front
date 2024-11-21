@@ -154,7 +154,45 @@
           margin-bottom: 10px;
           
         }
-  
+        
+        .postcode-container {
+          display: flex;
+          align-items: center;
+          margin-bottom: 5px;
+        
+          .postcode-input {
+            width: 60%;
+            height: 50px;
+            padding: 8px;
+            border: none;
+            border-radius: 8px ;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: var(--Gray-10);
+            color: var(--Gray-90);
+            outline: none;
+            margin-right: 10px;
+          }
+        
+          button {
+            width: 40%;
+            height: 50px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: var(--blue-80);
+            color: #fff;
+            cursor: pointer;
+            
+            &:hover {
+              background-color: var(--blue-70);
+            }
+            
+              
+          }
+        }
+        
         
       }
       
@@ -513,4 +551,18 @@
   width: 50%; 
   background-color: var(--blue-70);
   transition: width 0.3s ease-in-out;
+}
+
+.addressinput
+{
+ width: 100%;
+ height: 50px;
+ padding: 8px;
+ border: none;
+ border-radius: 8px;
+ font-size: 18px;
+ font-weight: 500;
+ background-color: var(--Gray-10);
+ color: var(--Gray-90);
+ margin-bottom: 5px;
 }
