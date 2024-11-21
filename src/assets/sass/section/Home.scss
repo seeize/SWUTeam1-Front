@@ -15,6 +15,7 @@
 
   .Top-Home-Banner {
     margin-left: -20px;
+    z-index: 0;
   }
 
   
@@ -171,6 +172,7 @@
     width: 30%;
     margin-top: 20px;
     margin-left: 750px;
+    cursor: pointer;
   }
 
   .B-menu-list {
@@ -257,8 +259,9 @@
 
   .Bottom-Home-Banner {
     position: absolute;
-    left: 35%;
+    left: 50%;
     bottom: 5%;
+    margin-left: -180px;
   }
 
 
