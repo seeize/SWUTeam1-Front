@@ -91,14 +91,14 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin: 10px 0 0 auto; /* 오른쪽 정렬 */
+    margin: 10px 0 0 auto; 
   }
   
   /* 하단 버튼 컨테이너 */
   .bottom-buttons {
     width: 320px;
     position: absolute;
-    bottom: 100px; /* 화면 하단에 배치 */
+    bottom: 100px;
     left: 20px;
     right: 20px;
   }
@@ -130,3 +130,84 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   }
   
+  .B-edit-button{
+    display: none;
+    padding: 8px 16px;
+    background-color: #FF424D;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 0 0 auto;
+  }
+
+  @media (min-width: 1180px) {
+    .ocr-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 1180px;
+      height: 820px;
+      background: linear-gradient(332deg, #FFEFC2 69.39%, #FFFCF5 93.75%);
+      position: relative;
+    }
+
+    .result-textarea, .spelling-result-textarea {
+      width: 1000px;
+      height: 250px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      font-size: 20px;
+    }
+
+    .spelling-result-textarea{
+      bottom: 10%;
+    }
+
+    .B-edit-button {
+      position: absolute;
+      right: 9%;
+      top: 50%;
+      display: block;
+      cursor: pointer;
+    }
+
+    .edit-button {
+      display: none;
+    }
+
+    .character-count {
+      position: absolute;
+      right: 10%;
+      top: 43%;
+      z-index: 3;
+    }
+
+    .ocrtitle {
+      font-size: 30px;
+      font-weight: 700;
+      margin-left: -880px;
+    }
+    
+    .bottom-buttons {
+      position: absolute;
+      top: 10%; 
+      left: 70%;
+    }
+    
+    .retry-button {
+      padding: 10px 5px;    
+      width: 120px;
+      margin-right: 10px;
+    }
+    
+    /* 입력하기 버튼 */
+    .submit-button {
+
+      padding: 10px 5px;    
+      width: 120px;
+    }
+  }

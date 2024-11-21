@@ -45,10 +45,13 @@ const OCRresult = () => {
                     onChange={handleChange}
                     className="result-textarea"
                     maxLength="1000"
+                    spellCheck="true"
                     readOnly
                 />
 
                 <button className="edit-button">수정하기</button>
+                <button className="B-edit-button">맞춤법 수정하기</button>
+
 
                 {/*맞춤법 검사 텍스트박스는 백엔드 연결 후 수정 예정*/}
                 <textarea

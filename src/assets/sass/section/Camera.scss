@@ -4,7 +4,6 @@
     box-sizing: border-box;
   }
   
-  
   .camera-container {
     width: 360px;
     height: 821px;
@@ -91,3 +90,18 @@
     opacity: 0.8;
   }
   
+
+  @media (min-width: 1180px) {
+    .camera-container {
+      width: 1180px;
+      height: 820px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .Camera-close-button{
+      left: -300%;
+    }
+    
+  }

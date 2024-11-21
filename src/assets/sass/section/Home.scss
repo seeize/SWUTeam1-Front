@@ -15,6 +15,7 @@
 
   .Top-Home-Banner {
     margin-left: -20px;
+    z-index: 0;
   }
 
   
@@ -171,19 +172,20 @@
     width: 30%;
     margin-top: 20px;
     margin-left: 750px;
+    cursor: pointer;
   }
 
   .B-menu-list {
-    display: flex; /* 수평 정렬 */
-    list-style: none; /* 기본 목록 스타일 제거 */
+    display: flex;
+    list-style: none; 
     padding: 0;
     margin: 0;
-    justify-content: space-between; /* 각 항목 간 간격 조정 */
+    justify-content: space-between;
   }
   
   .menu-list li {
-    margin: 0 10px; /* 항목 간 간격 추가 */
-    cursor: pointer; /* 클릭 가능한 느낌 추가 */
+    margin: 0 10px; 
+    cursor: pointer;
   }
   
   .Top-Home-Banner {
@@ -230,7 +232,7 @@
     display: none;
   }
 
-  .Home-resume-list .Home-resume-item:nth-child(n + 4) {
+  .Home-resume-list .Home-resume-item:nth-child(n + 3) {
     display: none;
   }
 
@@ -257,8 +259,9 @@
 
   .Bottom-Home-Banner {
     position: absolute;
-    left: 35%;
+    left: 50%;
     bottom: 5%;
+    margin-left: -180px;
   }
 
 
