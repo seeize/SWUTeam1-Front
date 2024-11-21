@@ -69,7 +69,7 @@ function Camera() {
     };
 
     return (
-        <div className="container">
+        <div className="container camera">
         <div className="camera-container">
             <div className="camera-top">
                 <button className="Camera-close-button" onClick={() => navigate(-1)}>
