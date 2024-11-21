@@ -31,9 +31,9 @@ const InterestDetail = () => {
   }
 
   return (
-    <div className="container">
+    <div className="detail-container">
       <Header />
-      <main className="content">
+      <main className="detail-content">
         <div className="Banner">
           <Banner />
         </div>
@@ -41,7 +41,7 @@ const InterestDetail = () => {
           {/* Title Section */}
           <div className="title-section">
             <img
-              src={require("../components/icons/left-arrow.png")}
+              src={require("../assets/img/icons/left-arrow.png")}
               alt="아이콘"
               className="title-icon"
               onClick={() => navigate("/interest")} // 클릭 시 interest 페이지로 이동

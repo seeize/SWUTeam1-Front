@@ -5,26 +5,25 @@
     box-sizing: border-box;
   }
 
+  .interest-container {
+    width: 360px;
+    height: 821px;
+    background-color: #f0f0f0;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
 
-  .content {
+  .interest-content {
     padding: 20px;
   }
   
   .Banner {
     margin: -20px;
   }
-  
-  .job-posts,
-  .my-resume {
-    margin-top: 20px;
+
+  .interest-hired {
+    font-weight: 600;
   }
-  
-  .job-posts h2,
-  .my-resume h2 {
-    color: #262626;
-    font-size: 24px;
-  }
-  
 
   .add-post {
     margin: 10px 0px -5px 210px;
@@ -39,9 +38,10 @@
     align-items: center;
   }
   
-  
+
   .plus_icon {
     height: 20px;
+    width: 20px;
     margin-right: 3px;
   }
   
@@ -82,15 +82,6 @@
     justify-content: space-between;
   }
   
-  /*내 이력서 박스 하나*/
-  .resume-item {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
   .orange-arrow {
     height: 24px;
     width: 24px;
@@ -124,10 +115,11 @@
 
 /* 모달 내용 */
 .modal-content {
-  background-color: #fffbdd;
-  padding: 20px;
+  background-color: #fff3c4;
+  padding: 18px;
   border-radius: 10px;
   width: 300px;
+  height: 220px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -137,18 +129,36 @@
 }
 
 /* 입력 필드와 버튼 그룹 */
-.input-group {
+.input-title {
   display: flex;
   align-items: center;
   margin: 15px 0;
 }
 
-.input-group input {
+.input-address {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.input-title input {
+  flex: 1;
+  width: 270px;
+  height: 40px;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 4px;
+  margin-left: -8px;
+  margin-top: -10px;
+  margin-bottom: -15px;
+}
+
+.input-address input {
   flex: 1;
   padding: 8px;
   font-size: 14px;
-  border: 1px solid #ccc;
   border-radius: 4px;
+  margin-left: -8px;
 }
 
 .paste-button {
@@ -157,9 +167,9 @@
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 8px 9px;
+  padding: 9px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* 추가하기 버튼 */
@@ -174,10 +184,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15px; /* 위쪽 여백 추가 */
 }
 
 .add-button img {
   height: 18px; /* 이미지 크기 줄임 */
   margin-right: 5px;
+}
+
+.set-done {
+  font-weight: bold;
 }

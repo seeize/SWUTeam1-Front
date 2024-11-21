@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import './CarouseBanner.scss';
+import '../assets/sass/section/CarouseBanner.scss';
 
 const banners = [
     /* 배너 디자인 완료되면 다른 png로 바꿀 것*/
     {
-        src: require('./icons/banner1.png'),
+        src: require('../assets/img/icons/banner1.png'),
         alt: '재도약 프로그램 배너 1',
     },
     {
-        src: require('./icons/banner1.png'),
+        src: require('../assets/img/icons/banner1.png'),
         alt: '재도약 프로그램 배너 2',
     },
     {
-        src: require('./icons/banner1.png'),
+        src: require('../assets/img/icons/banner1.png'),
         alt: '재도약 프로그램 배너 3',
     },
 ];
@@ -39,10 +39,10 @@ const CarouselBanner = () => {
         <div className="carousel-banner">
             <div className="banner-content">
                 <button className="arrow left-arrow" onClick={prevBanner}>
-                    <img src={require('./icons/left-arrow.png')} alt="왼쪽 화살표" />
+                    <img src={require('../assets/img/icons/left-arrow.png')} alt="왼쪽 화살표" />
                 </button>
                 <button className="arrow right-arrow" onClick={nextBanner}>
-                    <img src={require('./icons/right-arrow.png')} alt="오른쪽 화살표" />
+                    <img src={require('../assets/img/icons/right-arrow.png')} alt="오른쪽 화살표" />
                 </button>
                 <img src={banners[currentIndex].src} alt={banners[currentIndex].alt} className="banner-image" />
             </div>

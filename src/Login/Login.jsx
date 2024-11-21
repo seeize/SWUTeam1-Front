@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import './login.scss';
 
 function Login() {
@@ -7,8 +6,9 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  // 일반 로그인
+  //(API 연결 주석 처리)
   const handleLogin = async () => {
+    /*
     const requestData = {
       username: id,
       password: password,
@@ -52,10 +52,15 @@ function Login() {
         setError('서버 오류입니다. 다시 시도해 주세요.');
       }
     }
+    */
+
+    console.log('테스트용 로그인 :', { id, password });
+    window.location.href = '/home';
   };
 
-  // 구글 로그인
+  // 구글 로그인 (API 연결 주석 처리)
   const handleGoogleLogin = async () => {
+    /*
     const requestData = {
       email: id,
       password: '',
@@ -93,6 +98,9 @@ function Login() {
         setError('구글 로그인 중 서버 오류가 발생했습니다.');
       }
     }
+    */
+
+    window.location.href = '/home';
   };
 
   return (

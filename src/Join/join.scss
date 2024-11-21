@@ -1,26 +1,40 @@
+
 .join-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: rgb(234, 234, 234);
-  width: 100vw; // 화면 너비를 기준으로 확장
-  height: 100vh; // 화면 높이를 기준으로 확장
-  min-width: 360px; // 최소 너비
-  min-height: 800px; // 최소 높이
+  align-items: center; 
+  background-color: rgb(234, 234, 234); 
+  width: 100vw;
+  height: 100vh; 
+  min-width: 360px; 
+  min-height: 800px; 
+  margin: 0;
 }
 
 .join-content {
-  width: 360px; // 고정 너비
-  height: 800px; // 고정 높이
+  width: 360px; 
+  height: 800px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: white; 
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+
+.title-image {
+  margin-top: -100px;
+  width: 200px;
+  height: 180px;
+  background-image: url('../assets/img/image/title.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 
 .join-form {
   width: 100%;
@@ -28,16 +42,7 @@
   flex-direction: column;
   align-items: center;
 
-  .id-label {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: -10px;
-    margin-bottom: 55px;
-    text-align: left;
-    width: 100%;
-    padding-left: 10px;
-  }
-
+  .id-label,
   .password-label {
     font-size: 24px;
     font-weight: bold;
@@ -54,22 +59,10 @@
     border: 1px solid #013C58;
     border-radius: 10px;
     font-size: 18px;
-    width: 90%;
-  }
-
-  .check-button {
-    padding: 18px;
-    background-color: #013C58;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 140px;
-    font-weight: 700;
-    font-size: 18px;
     width: 100%;
   }
 
+  .check-button,
   .next-button {
     padding: 18px;
     background-color: #013C58;
@@ -77,11 +70,81 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 70px;
     font-weight: 700;
     font-size: 18px;
     width: 100%;
   }
 
+  .check-button {
+    margin-top: 140px;
+  }
 
+  .next-button {
+    margin-top: 70px;
+  }
+
+  .login-link {
+    display: none;
+  }
+
+  .error {
+    color: red;        
+    text-align: left;  
+    margin-top: 10px;  
+    font-size: 14px;    
+  }
+  
+}
+
+/* 반응형 스타일 */
+
+/* PC 스타일 (1180px 이상) */
+@media (min-width: 1180px) {
+  
+  .join-container {
+    background-image: linear-gradient(to bottom, #ffffff, #f8eac9); 
+    background-color: transparent; 
+    padding: 50px 0; 
+    justify-content: center; 
+  }
+
+  .join-content {
+    width: 600px; 
+    height: 800px; 
+    background-color: transparent;
+    padding: 40px;
+    box-shadow: none;
+  }
+
+  .join-form .id-label,
+  .join-form .password-label {
+    font-size: 32px; 
+  }
+
+  .join-form .join-input,
+  .join-form .check-button,
+  .join-form .next-button {
+    font-size: 22px; 
+  }
+
+
+  .join-form .check-button {
+    margin-top: 140px;
+  }
+
+  .join-form .next-button {
+    margin-top: 70px;
+  }
+
+  .join-form .login-link {
+    display: block;
+    color: #000000;
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center
+  }
+
+  .login-button {
+    color: #0073e6;
+  }
 }

@@ -1,0 +1,73 @@
+// 해당 폴더는 vars, 전역으로 사용할 css 변수를 선언하는 폴더입니다.
+// 형식은 다음과 같습니다. 
+// 수정 시 보다 편리하게 관리하기 위해 사용됩니다.
+// .example {
+//     color: var(--maincolor);
+// }
+// 폰트는 프리텐다드를 사용합니다.
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+    --mainfont: "pretendard";
+
+    // 메인 컬러 
+    --main: #F5A201;
+
+    // System Color
+    --black: #000;
+    --white: #fff;
+    --blue: #107BFF;
+    --red: #FF424D;
+    --green: #02936A;
+
+    // 투명
+    --none: #00000000;
+
+    // Primary Color
+    --blue-90: #001823;
+    --blue-80: #013C58;
+    --blue-70: #005E8A;
+    --blue-60: #0080BD;
+    --blue-50: #00A3F0;
+    --blue-40: #24B9FF;
+    --blue-30: #57C9FF;
+    --blue-20: #8AD9FF;
+    --blue-10: #BDEAFF;
+    --blue-0: #F0FAFF;
+
+    // Secondary Color 
+    --yellow-50: #F5A201;
+    --yellow-40: #FFBA42;
+    --yellow-30: #FFD35B;
+    --yellow-20: #FFE18F;
+    --yellow-10: #FFEFC2;
+    --yellow-00: #FFFCF5;
+
+
+    // Gray Scale
+    --Gray-90: #262626;
+    --Gray-80: #404040;
+    --Gray-70: #595959;
+    --Gray-60: #737373;
+    --Gray-50: #8C8C8C;
+    --Gray-40: #A6A6A6;
+    --Gray-30: #BFBFBF;
+    --Gray-20: #D9D9D9;
+    --Gray-10: #F2F2F2;
+    --Gray-0: #FFFFFF;
+    
+
+    // 폰트 세팅
+    font-family: var(--mainfont);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    // 폰트 최적화
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}

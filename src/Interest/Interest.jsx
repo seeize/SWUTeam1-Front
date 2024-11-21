@@ -46,18 +46,18 @@ const Interest = () => {
   };
 
   return (
-    <div className="container">
+    <div className="interest-container">
       <Header />
-      <main className="content">
+      <main className="interest-content">
         <div className="Banner">
           <Banner />
         </div>
         <section className="job-posts">
-          <h2>관심 채용 공고</h2>
+          <h2 className="interest-hired">관심 채용 공고</h2>
 
           <button className="add-post" onClick={openModal}>
             <img
-              src={require("../components/icons/tabler_plus.png")}
+              src={require("../assets/img/icons/tabler_plus.png")}
               alt="+" 
               className="plus_icon"
             />
@@ -87,7 +87,7 @@ const Interest = () => {
               className="modal-content"
               onClick={(e) => e.stopPropagation()} 
             >
-              <div className="input-group">
+              <div className="input-title">
                 <input
                   type="text"
                   placeholder="사이트 별칭을 적어주세요"
@@ -96,7 +96,7 @@ const Interest = () => {
                 />
               </div>
 
-              <div className="input-group">
+              <div className="input-address">
                 <input
                   type="text"
                   placeholder="사이트 주소"
@@ -116,7 +116,7 @@ const Interest = () => {
               </div>
               <button className="add-button" onClick={handleAddPost}>
                 <img
-                  src={require("../components/icons/tabler_plus.png")}
+                  src={require("../assets/img/icons/tabler_plus.png")}
                   alt="+" 
                   className="plus_icon"
                 />

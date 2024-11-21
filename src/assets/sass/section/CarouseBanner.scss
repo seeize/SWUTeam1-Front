@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-banner {
+    position: relative;
+    width: 100%;
+    padding-bottom: 24px;
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    max-width: 360px; 
+}
+
+.banner-image {
+    width: 100%;
+    z-index: 0; 
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 5px; 
+}
+
+.right-arrow {
+    right: 5px; 
+}

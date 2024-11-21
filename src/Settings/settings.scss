@@ -1,0 +1,83 @@
+* {
+    font-family: pretendard;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .settings-container {
+    width: 360px;
+    height: 821px;
+    background-color: #f0f0f0;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+
+  .settings-content {
+    padding: 20px;
+    margin-top: 120px;
+  }
+
+  .initial-message-container {
+    margin-top: -90px;
+  }
+  
+
+  .current-password, .new-password, .complete-message {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .password-change {
+        padding: 18px;
+        margin-top: 30px;
+        margin-bottom: 12px;
+        border: 1px solid #013C58;
+        border-radius: 10px;
+        font-size: 18px;
+        width: 100%;
+
+  }
+
+  .password-again {
+    padding: 18px;
+    margin-bottom: 12px;
+    border: 1px solid #013C58;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 100%;
+
+}
+ 
+.change-button {
+  font-size: 18px;
+}
+
+  .ok-button {
+    padding: 18px;
+    background-color: #013C58;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 70px;
+    font-weight: 700;
+    font-size: 18px;
+    width: 100%;
+}
+
+.gologin-button {
+  padding: 18px;
+  background-color: #013C58;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 242px;
+  font-weight: 700;
+  font-size: 18px;
+  width: 100%;
+}

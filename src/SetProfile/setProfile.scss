@@ -1,0 +1,245 @@
+
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    width: 100vw;
+    height: 100vh;
+    min-width: 360px;
+    min-height: 800px;
+}
+  
+.profile-content {
+    width: 360px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.profile-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .label {
+        margin-top: 5px;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 110px;
+        text-align: left;
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .phone-label, .birthday-label {
+        margin-top: -123px;
+    }
+
+    .gender-label {
+        margin-top: -125px;
+        
+    }
+
+    .email-label {
+        margin-top: -170px;
+    }
+
+    .join-input {
+        padding: 18px;
+        margin-bottom: 12px;
+        border: 1px solid #013C58;
+        border-radius: 10px;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .check-button {
+        padding: 18px;
+        background-color: #013C58;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 100px;
+        margin-bottom: -50px;
+        font-weight: 700;
+        font-size: 18px;
+        width: 100%;
+        &:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+    }
+
+    .next-button, .start-resume-button {
+        padding: 18px;
+        background-color: #013C58;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 70px;
+        font-weight: 700;
+        font-size: 18px;
+        width: 100%;
+    }
+    
+
+    .info-text {
+        margin-top: 30px;
+    }
+
+    .login-button {
+        text-align: center;
+        color: #0073e6;
+        text-decoration: none;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .login-section {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .radio-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 55px;
+
+        label {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        input[type="radio"] {
+                display: inline-block; 
+                width: auto; 
+                height: auto; 
+
+        }
+    }
+
+    .email-input-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: -40px;
+        margin-bottom: -20px;
+
+
+
+        input.email-id,
+        select.email-domain,
+        input.custom-domain {
+            flex: 1;
+            padding: 18px;
+            margin: 0;
+            border: 1px solid #013C58;
+            border-radius: 10px;
+            font-size: 18px;
+            
+        }
+
+        span {
+            margin: 0 10px;
+            font-size: 18px;
+        }
+    }
+
+    .info-text {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .email-check-message.checked {
+        margin-top: -80px; 
+        margin-right: 155px;
+        color: #0073e6;
+      }
+      
+      .next-button.checked {
+        margin-top: 120px;
+      }
+
+      .email-label.checked {
+        margin-top: -50px;
+      }
+    
+
+      .checking-icon {
+        width: 100px;
+        height: 100px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .set-done {
+        margin-top: -80px;
+        font-weight: 600;
+      }
+
+      .set-done-p {
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: -40px;
+      }
+
+      .radio-icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      .radio-group {
+        margin-top: 5px;
+        margin-bottom: 40px;
+      }
+
+      .radio-item1 {
+        margin-left: 10px;
+      }
+
+      .radio-item2 {
+        margin-right: 100px;
+
+      }
+
+      .radio-male, .radio-female {
+        margin-left: 10px;
+      }
+
+
+/* PC 스타일 (1180px 이상) */
+@media (min-width: 1180px) {
+  .profile-container {
+    background-image: linear-gradient(to bottom, #ffffff, #f8eac9); 
+    background-color: transparent; 
+    padding: 50px 0; 
+    justify-content: center; 
+  }
+
+  .profile-content {
+    width: 600px; 
+    height: 800px; 
+    background-color: transparent;
+    padding: 40px;
+    box-shadow: none;
+  }
+}
+
+     
+
+
+    
+}

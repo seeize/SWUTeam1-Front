@@ -1,0 +1,451 @@
+.resume_warp {
+  padding: 40px 20px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // position: relative;
+
+    
+    .step {
+      margin-bottom: 30px;
+  
+      .step-header {
+        display: flex;
+        margin-bottom: 10px;
+  
+        .step-number {
+          background-color: var(--blue-80);
+          color: var(--Gray-0);
+          border-radius: 8px;
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 8px;
+          font-size: 20px;
+        } 
+  
+        .step-title {
+          font-size: 22px;
+          font-weight: bold;
+          color: var(--Gray-90); 
+        }
+      }
+  
+      .title-input {
+        padding: 5px;
+        border: none; 
+        border-bottom: 3px solid var(--blue-70); 
+        font-size: 20px;
+        width: 100%;
+        resize: none;
+        height: 40px;
+      }
+  
+      .character-count {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--blue-90);
+        text-align: right;
+        margin-bottom: 20px;
+      }
+
+      .character-count.full {
+        color: var(--red);
+        font-weight: 700;
+      }
+
+      .photoBtn-container {
+        text-align: right; 
+        margin-top: 20px;
+    }
+      .photo-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        cursor: pointer;
+        width: 140px;
+        height: 45px;
+        color: var(--Gray-90);
+        border: 2px solid var(--yellow-50);
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: var(--yellow-00);
+
+        .camera-icon {
+          width: 20px;
+          height: 20px; 
+          margin-right: 8px; 
+        }
+      }
+
+      .profile-container{
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        margin: 30px 0;
+      }
+  
+      .profile-section {
+        position: relative; 
+        display: inline-block;
+        margin-bottom: 10px;
+        
+        .profile-photo {
+          width: 82.6px;
+          object-fit: cover;
+        }
+  
+        .profile-badge {
+          font-size: 12px;
+          color: var(--Gray-90);
+          position: absolute; 
+          bottom: -10px; 
+          right: -20px;
+          cursor: pointer;
+        }
+      }
+  
+      .input-group {
+        margin-bottom: 20px;
+  
+        label {
+          display: block;
+          font-size: 16px;
+          color: var(--blue-70);
+          font-weight: 800;
+          margin-bottom: 5px;
+        }
+
+        input {
+          width: 100%;
+          padding-top: 5px;
+          font-size: 16px;
+          color: var(--Gray-90);
+          font-weight: 500;
+        } 
+
+        input::placeholder {
+          color: var(--Gray-90);
+          font-size: 16px;
+          font-weight: 700; 
+        }
+
+        .detailInput::placeholder {
+          color: var(--Gray-90); 
+          font-size: 18px;
+          font-weight: 500;
+      }
+      
+
+        select, .detailInput {
+          width: 100%;
+          height: 50px;
+          padding: 8px;
+          border: none;
+          border-radius: 8px;
+          font-size: 18px;
+          font-weight: 500;
+          background-color: var(--Gray-10);
+          color: var(--Gray-90);
+          margin-bottom: 10px;
+          
+        }
+  
+        
+      }
+      
+    }
+    // 3번
+    .education-input {
+        display: flex;
+        align-items: center;
+        // margin-bottom: 20px;
+        // padding-bottom: 8px;
+      
+      
+      .input-field {
+        flex: 1;
+        padding: 5px;
+        border: none;
+        border-bottom: 3px solid var(--blue-70); 
+        font-size: 20px;
+        color: var(--Gray-90);
+        width: 100%;
+        resize: none;
+        height: 40px;
+      }
+
+      .search-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+      
+      .search-button img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .selection-notice {
+      margin-bottom: 20px;
+      color: var(--Gray-80);
+      font-size: 20px;
+      font-weight: 500;
+      margin: 30px 0;
+
+      .notice-title{
+        color: var(--black);
+      }
+    }
+    .addBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 250px;
+      padding: 12px;
+      background-color: var(--blue-10);
+      color: var(--Gray-90);
+      font-size: 20px;
+      font-weight: 500;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .step4 {
+      .career-tabs {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 10px 30px 0 ;
+
+        .blueBtn{
+          background-color: var(--blue-10);
+
+          &:hover {
+            background-color: var(--blue-20);
+          }
+        }
+
+        .grayBtn{
+          background-color: var(--Gray-10);
+
+          &:hover {
+            background-color: var(--Gray-20);
+          }
+        }
+    
+        .blueBtn, .grayBtn {
+          flex: 1;
+          padding: 12px;
+          text-align: center;
+          border-radius: 8px;
+          font-size: 20px;
+          font-weight: 500;
+          cursor: pointer;
+          color: var(--Gray-90);
+          border: none;
+          margin-right: 30px;
+        }
+      }
+      
+      .career-summary {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px 20px 5px;
+    
+        .total-experience-title {
+          font-size: 22px;
+          font-weight: 700;
+          color: var(--Gray-90);
+        }
+    
+        .total-experience-value {
+          font-size: 20px;
+          font-weight: 500;
+          color: var(--Gray-90);
+        }
+      }
+      .addBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 230px;
+        padding: 12px;
+        background-color: var(--blue-10);
+        color: var(--Gray-90);
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 8px;
+        cursor: pointer;
+    
+        &:hover {
+          background-color: var(--blue-20);
+        }
+      }
+
+      
+    
+    }
+    .step5 {
+    
+      .strength-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 20px;
+    
+        .strength-item {
+          padding: 10px 16px;
+          border: none;
+          border-radius: 28px;
+          background-color: var(--Gray-10);
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--Gray-90);
+          cursor: pointer;
+    
+          &:hover {
+            background-color:  var(--Gray-20);
+            border: none;
+          }
+    
+          &.selected {
+            background-color: var(--Gray-20);
+            border: none;
+          }
+        }
+        
+        .strength-item:disabled {
+          background-color: var(--Gray-10); 
+          color: var(--Gray-50); 
+          cursor: not-allowed; 
+        }
+        
+      }
+    
+      .completeBtn {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--blue-80);
+        color: var(--Gray-0);
+        font-size: 24px;
+        font-weight: 500;
+        border-radius: 12px;
+        cursor: pointer;
+    
+        &:hover {
+          background-color: var(--blue-70);
+        }
+      }
+    }
+    
+    .desSec{
+      margin: 20px 20px 20px 5px;
+      
+      .desTitle{
+        color: var(--Gray-90);
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 5px;
+      }
+
+      .desDetail{
+        color: var(--Gray-70);
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    // 학력 추가 
+    .education-box, .career-box  {
+      background-color: var(--yellow-10); 
+      border-radius: 12px; 
+      padding: 15px;
+      margin-bottom: 20px; 
+      width: 320px; 
+    
+      .input-field {
+        width: 100%; 
+        padding: 10px; 
+        margin-bottom: 15px;
+        border: none; 
+        font-size: 18px;
+        color: var(--Gray-90); 
+        border-radius: 6px; 
+      }
+    
+      .box-1{
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        margin-bottom: 10px; 
+      }
+
+      .box-2{
+        display: flex; 
+        align-items: center; 
+        justify-content: right; 
+        margin-bottom: 10px; 
+
+        >p {margin-right: 30px;}
+      }
+ 
+      .date-start, .date-end {
+        width: 70%; 
+        padding: 10px; 
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+
+      .graduation-status {
+        width: 40%; 
+        margin: 20px 0 10px auto;
+      }
+      
+      .graduation-status select {
+        width: 100%;
+        height: 40px; 
+        border: none;
+        border-radius: 8px; 
+        padding: 8px; 
+        font-size: 16px;
+        font-weight: 500;
+      }
+      
+      .graduation-status select:focus {
+        outline: none; 
+        box-shadow: 0 0 2px rgba(0, 123, 255, 0.5); 
+      }
+      
+      .box-3 {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+
+        .addBtn {
+          width: 150px;
+          background-color: var(--blue-10);
+          margin-top: 10px;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 6px;
+  
+          &:hover {
+            background-color: var(--blue-20);
+          }
+        }
+      }
+        
+        
+      
+  }
+
+}
+  
